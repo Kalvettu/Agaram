@@ -4,13 +4,18 @@
 	<script type="text/javascript" src="static/js/jquery.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.js"></script>
 	<script type="text/javascript" src="static/js/script.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<form method="post" enctype="multipart/form-data" id="image-upload">
-		<input type="file" name="file">
-		<input type="range" name="threshold" id="threshold">
-		<input type="button" value="Preview" id="image-preview">
-		<input type="button" value="Submit" id="image-submit">
-	</form> 
-	<img src="" id="temporary">
+	<div class="container">
+		<form method="post" enctype="multipart/form-data" id="image-upload">
+			<input type="file" name="file">
+			<input type="range" name="threshold" id="threshold">
+			<input type="button" value="Preview" id="image-preview">
+			<input type="button" value="Submit" id="image-submit">
+		</form> 
+	</div>
+	<div class="container">
+		<img src="" id="temporary">
+	</div>
 </body>
