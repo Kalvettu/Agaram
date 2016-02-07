@@ -23,3 +23,11 @@ input#image-preview {
 .form-group {
     line-height: 2.5em;
 }
+
+img.img-responsive {
+    height: 150px;
+}
+
+.row.image-examples {
+    display: -webkit-box;
+}

@@ -38,7 +38,6 @@ def upload_file():
 		response = {}
 
 		if file and allowed_file(file.filename):
-			print 'im of'
 			now = datetime.now()
 			filename = now.strftime('%Y-%m-%d-%H-%M-%S') + '_' + secure_filename(file.filename) 
 			file.save(os.path.join(UPLOAD_FOLDER, filename))
@@ -46,7 +45,6 @@ def upload_file():
 			#load image
 			dir = os.curdir
 			img = filename
-			print img
 			path = os.path.join(UPLOAD_FOLDER,img)
 			raw_image = cv2.imread(path,0)
 			
@@ -55,7 +53,6 @@ def upload_file():
 			threshold = int(request.form['threshold'])
 			sm_image = cv2.bilateralFilter(raw_image, 25, 50, 50)
 			ret,bw_image = cv2.threshold(sm_image,threshold,255,cv2.THRESH_BINARY_INV)
-			print 'check'
 			cv2.imwrite(os.path.join(TEMP_FOLDER, filename), bw_image)
 			return jsonify({
 				'url': 'static/temporary/'+filename,
