@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <head>
 	<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="static/css/range.css">
 	<link rel="stylesheet" type="text/css" href="static/css/styles.css">
 	<script type="text/javascript" src="static/js/jquery.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.js"></script>
+	<script type="text/javascript" src="static/js/range.js"></script>
 	<script type="text/javascript" src="static/js/script.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -12,7 +14,7 @@
 		<form method="post" enctype="multipart/form-data" id="image-upload">
 			<div class="form-group"> 
 				<input type="file" name="file">
-				<input type="range" name="threshold" id="threshold">
+				<input type="range" name="threshold" id="threshold" data-slider-min="0" data-slider-max="255" data-slider-value="120">
 				<input type="button" value="Preview" class="btn btn-info" id="image-preview">
 				<input type="button" value="Submit" class="btn btn-success" id="image-submit">
 			</div>

@@ -2,6 +2,8 @@ $(document).ready(function() {
 
     var temp_image, first_save;
 
+    var range_slider = $("#threshold").slider({});
+
     $('#image-preview').click(function (argument) {
 
         var formData = new FormData($('#image-upload')[0]);
