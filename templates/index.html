@@ -15,7 +15,8 @@
 			<div class="col-md-4 image-form-col">
 				<form method="post" enctype="multipart/form-data" id="image-upload">
 					<div class="form-group"> 
-						<input type="file" name="file">
+						<label for="file">Choose an image</label>
+						<input type="file" name="file" id="file" class="inputfile">
 						<label for="threshold">Select an optimal threshold value</label>
 						<input type="range" name="threshold" id="threshold" data-slider-min="0" data-slider-max="255" data-slider-value="120">
 						<input type="button" value="Preview" class="btn btn-info" id="image-preview">
@@ -28,13 +29,13 @@
 							<p>
 								<strong>Good Threshold</strong>
 							</p>
-							<img src="static/images/sample-good.jpg" class="img-responsive">
+							<img src="static/images/sample-good.jpg" class="img-responsive example-img">
 						</div>
 						<div class="col-md-8">
 							<p>
 								<strong>Bad Threshold</strong>
 							</p>
-							<img src="static/images/sample-bad.jpg" class="img-responsive">
+							<img src="static/images/sample-bad.jpg" class="img-responsive example-img">
 						</div>
 					</div>
 				</div>
@@ -42,7 +43,7 @@
 			<div class="col-md-8">
 				<div class="row">
 					<!-- <img src="" class="img-responsive center-block preview-image" id="temporary"> -->
-					<img src="http://nemanjakovacevic.net/wp-content/uploads/2013/07/placeholder.png" class="img-responsive center-block preview-image" id="temporary">
+					<img src="http://nemanjakovacevic.net/wp-content/uploads/2013/07/placeholder.png" class="img-responsive pull-right preview-image" id="temporary">
 				</div>
 				<div class="row">
 					<input type="button" value="Submit" class="btn btn-success" id="image-submit">

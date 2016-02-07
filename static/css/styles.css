@@ -3,7 +3,7 @@
 }
 
 img#temporary {
-    height: 300px;
+    width: 600px;
 }
 
 .preview-image {
@@ -12,7 +12,6 @@ img#temporary {
 
 input#image-submit {
     float: right;
-    margin-right: 175px;
     margin-top: 50px;
 }
 
@@ -24,10 +23,11 @@ input#image-preview {
     line-height: 2.5em;
 }
 
-img.img-responsive {
-    height: 150px;
-}
-
 .row.image-examples {
     display: -webkit-box;
 }
+
+.example-img {
+    height: 150px;
+}
+
