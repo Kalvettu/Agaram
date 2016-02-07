@@ -1,7 +1,25 @@
-.container.image-form-container {
+.image-form-col {
     margin-top: 75px;
 }
 
 img#temporary {
     height: 300px;
+}
+
+.preview-image {
+	margin-top: 75px;
+}
+
+input#image-submit {
+    float: right;
+    margin-right: 175px;
+    margin-top: 50px;
+}
+
+input#image-preview {
+    margin-left: 10px;
+}
+
+.form-group {
+    line-height: 2.5em;
 }
