@@ -20,6 +20,7 @@ $(document).ready(function() {
                 if (response['error'] == 0) {
                     temp_image = response['url'];
                     $('#temporary').attr('src', temp_image);
+                    formData.append('url', temp_image);
                 };
             }
 
@@ -30,16 +31,16 @@ $(document).ready(function() {
 
     $('#image-submit').click(function (argument) {
 
-        var formData = new FormData($('#image-upload')[0]);
-        formData.append('generate', 'yes');
-
+        console.log(temp_image)
         $.ajax({
 
-            url : '/upload',
+            url : '/generate',
             dataType: 'json',
             type: 'POST',
-            data: formData,
-            contentType: false,
+            data: JSON.stringify({
+                'url': temp_image
+            }),
+            contentType: "application/json; charset=utf-8",
             processData: false,
             success: function(response) {
                 console.log(response);
