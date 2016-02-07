@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <head>
 	<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="static/css/styles.css">
 	<script type="text/javascript" src="static/js/jquery.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.js"></script>
 	<script type="text/javascript" src="static/js/script.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<div class="container">
-		<form method="post" enctype="multipart/form-data" id="image-upload">git 
-			<input type="file" name="file">
-			<input type="range" name="threshold" id="threshold">
-			<input type="button" value="Preview" id="image-preview">
-			<input type="button" value="Submit" id="image-submit">
+	<div class="container image-form-container">
+		<form method="post" enctype="multipart/form-data" id="image-upload">
+			<div class="form-group"> 
+				<input type="file" name="file">
+				<input type="range" name="threshold" id="threshold">
+				<input type="button" value="Preview" class="btn btn-info" id="image-preview">
+				<input type="button" value="Submit" class="btn btn-success" id="image-submit">
+			</div>
 		</form> 
 	</div>
 	<div class="container">
-		<img src="" id="temporary">
+		<img src="" class="img-responsive center-block" id="temporary">
 	</div>
 </body>
